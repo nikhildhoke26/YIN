@@ -1,0 +1,48 @@
+<!--
+  @description       : Sending request for YCN.
+  @author            : Amol Patil/amol.patil@skinternational.com
+  @group             : SKI
+  @last modified on  : 03-01-2024
+  @last modified by  : Amol Patil/amol.patil@skinternational.com
+-->
+<template>
+  <div class="slds-box slds-theme_default" style="margin-bottom: 10px; border-radius: 0; border: 0;">
+     <template if:true={ShowLoding}>
+      <div class="exampleHolder">
+          <lightning-spinner alternative-text="Please Wait" size="medium" variant="brand"></lightning-spinner>
+      </div>
+  </template> 
+      <div class="slds-grid slds-wrap slds-gutters">
+          <div class="slds-col slds-size_1-of-1 slds-large-size_12-of-12" style="margin: 0 auto;">
+
+              <div style="border: 1px solid #000; border-radius: 4px; padding: 0px;">
+
+                  <div class="slds-section__title-action"
+                      style="margin-top: 0; margin-bottom: 0px; background: #000; color: #fff; font-weight: 600; border-top-left-radius: 4px; border-top-right-radius: 4px; font-size: 16px; padding: 5px;">
+                      <span style="margin: 0 auto;">YCN Request</span>
+                  </div>
+
+                  <div class="slds-grid slds-wrap slds-gutters" style="margin: 0 auto; text-align: center; padding: 20px;">
+
+                      <div class="slds-col slds-size_1-of-1 slds-large-size_12-of-12">
+                          <p><b>Are you sure, you want to create YCN Request?</b></p>
+                      </div>
+
+                      <div class="slds-col slds-size_1-of-1 slds-large-size_12-of-12">
+                          <div style="margin: 0 auto; text-align: center; margin-top: 20px; margin-bottom: 10px;">
+                              <lightning-button label="Cancel" title="Non-primary action" onclick={handleClose}
+                                  class="slds-m-left_x-small"></lightning-button>
+
+                              <lightning-button variant="brand" label="Submit" title="Primary action"
+                                  onclick={handleSubmit} class="slds-m-left_x-small">
+                              </lightning-button>
+                          </div>
+                      </div>
+
+                  </div>
+
+              </div>
+          </div>
+      </div>
+  </div>
+</template>
